@@ -12,6 +12,7 @@
         <ul>
             <li>
                 <p @click="redirectCourse()">Cursos</p>
+
             </li>
             <li>
                 <router-link to="/transitions_transform">Cursos</router-link>
