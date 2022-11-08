@@ -1,11 +1,20 @@
+<script setup>
+    import { useRouter } from "vue-router"
+    const router = useRouter();
+
+    const redirectCourse = () => {
+        return router.push('/transitions_transform');
+    }
+</script>
+
 <template>
     <nav>
         <ul>
             <li>
-                <router-link to="/" aria-current="page">Inicio</router-link>
+                <p @click="redirectCourse()">Cursos</p>
             </li>
             <li>
-                <router-link to="/">Cursos</router-link>
+                <router-link to="/transitions_transform">Cursos</router-link>
             </li>
             <li>
                 <router-link to="/">Contacto</router-link>
@@ -13,3 +22,5 @@
         </ul>
     </nav>
 </template>
+
+
