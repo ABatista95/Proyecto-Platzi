@@ -2,15 +2,15 @@
     <Header/>
 
     <div>
-        <h1>Menú de HOME</h1>
+        <p>Área de contacto</p>
     </div>
 
     <Footer/>
 </template>
 
 <script>
-import Header from "./Header.vue";
-import Footer from "./Footer"
+import Header from '../components/home/Header'
+import Footer from '../components/home/Footer'
 
 export default {
     components: {

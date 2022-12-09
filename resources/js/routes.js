@@ -1,13 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router'
 
-const Home = () => import('./vue/components/home/Home')
+// Rutas principales
+const Home = () => import('./vue/views/Home')
+const Courses = () => import('./vue/views/Courses')
+const Contact = () => import('./vue/views/Contact')
 
-// Lista rutas cursos
-const TransitionsTransform = () => import('./vue/courses/TransitionsTransform.vue')
+// Rutas de cursos
+const TransitionsTransform = () => import('./vue/views/courses/TransitionsTransform.vue')
+const Parallax = () => import('./vue/views/courses/Parallax')
 
 // Importe de componentes
-const ListCurse = () => import('./vue/components/home/ListCurse.vue')
-
 const routes = [
     {
         name: 'home',
@@ -15,10 +17,26 @@ const routes = [
         component: Home
     },
     {
+        name: 'courses',
+        path: '/courses',
+        component: Courses
+    },
+    {
+        name: 'contact',
+        path: '/contact',
+        component: () => import(/* webpackChunkName: "contact" */'./vue/views/Contact') //Forma de importar vista.
+    },
+
+    {
         name: 'transitionsTransform',
-        path: '/transitions_transform',
+        path: '/transitions-transform',
         component: TransitionsTransform
-    }
+    },
+    {
+      name: 'parallax',
+      path: '/parallax',
+        component: Parallax,
+    },
 ]
 
 const router = createRouter({
