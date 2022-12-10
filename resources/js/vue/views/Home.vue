@@ -2,7 +2,7 @@
     <Header message="Header-Init"/>
 
     <main>
-        <p>Mi nombre es: {{ name }} y mi edad es: {{ age }}</p>
+        <p>Mi nombre es: {{ name }} y mi edad es: {{ age }} - Se altero</p>
         <div>
             <p v-for=" item in array_items"> Data name: {{ item.name }}</p>
             <button @click="FuntPru()">Agregar</button>
