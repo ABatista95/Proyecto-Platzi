@@ -1,5 +1,5 @@
 ---
 deployment:
     tasks:
-      - export DEPLOYPATH=/home/tingcolc/developer/portfolio/
+      - export DEPLOYPATH=/home/tingcolc/portfolio/development/
       - /bin/cp -R * $DEPLOYPATH
