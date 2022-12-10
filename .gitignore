@@ -3,6 +3,10 @@
 /node_modules
 /public/hot
 /public/storage
+/public/css/app.css
+/public/js/app.js
+/public/mix-manifest.json
+/public/js/app.js.LICENSE.txt
 /storage/*.key
 
 # Laravel 4 specific
@@ -30,4 +34,5 @@ npm-debug.log
 yarn-error.log
 /.idea
 /.vscode
+/public/mix-manifest.json
 
