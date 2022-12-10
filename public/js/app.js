@@ -19793,7 +19793,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function render(_ctx, _cache) {
   var _component_router_view = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("router-view");
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("main", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view)]);
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createElementBlock)("div", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_router_view)]);
 }
 
 /***/ }),
@@ -19868,27 +19868,49 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue_router__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue-router */ "./node_modules/vue-router/dist/vue-router.mjs");
 /* provided dependency */ var process = __webpack_require__(/*! process/browser.js */ "./node_modules/process/browser.js");
 
+
+// Rutas principales
 var Home = function Home() {
-  return __webpack_require__.e(/*! import() */ "resources_js_vue_components_home_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/components/home/Home */ "./resources/js/vue/components/home/Home.vue"));
+  return __webpack_require__.e(/*! import() */ "resources_js_vue_views_Home_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/views/Home */ "./resources/js/vue/views/Home.vue"));
+};
+var Courses = function Courses() {
+  return __webpack_require__.e(/*! import() */ "resources_js_vue_views_Courses_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/views/Courses */ "./resources/js/vue/views/Courses.vue"));
+};
+var Contact = function Contact() {
+  return __webpack_require__.e(/*! import() */ "contact").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/views/Contact */ "./resources/js/vue/views/Contact.vue"));
 };
 
-// Lista rutas cursos
+// Rutas de cursos
 var TransitionsTransform = function TransitionsTransform() {
-  return __webpack_require__.e(/*! import() */ "resources_js_vue_courses_TransitionsTransform_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/courses/TransitionsTransform.vue */ "./resources/js/vue/courses/TransitionsTransform.vue"));
+  return __webpack_require__.e(/*! import() */ "resources_js_vue_views_courses_TransitionsTransform_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/views/courses/TransitionsTransform.vue */ "./resources/js/vue/views/courses/TransitionsTransform.vue"));
+};
+var Parallax = function Parallax() {
+  return __webpack_require__.e(/*! import() */ "resources_js_vue_views_courses_Parallax_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/views/courses/Parallax */ "./resources/js/vue/views/courses/Parallax.vue"));
 };
 
 // Importe de componentes
-var ListCurse = function ListCurse() {
-  return __webpack_require__.e(/*! import() */ "resources_js_vue_components_home_ListCurse_vue").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/components/home/ListCurse.vue */ "./resources/js/vue/components/home/ListCurse.vue"));
-};
 var routes = [{
   name: 'home',
   path: '/',
   component: Home
 }, {
+  name: 'courses',
+  path: '/courses',
+  component: Courses
+}, {
+  name: 'contact',
+  path: '/contact',
+  component: function component() {
+    return __webpack_require__.e(/*! import() | contact */ "contact").then(__webpack_require__.bind(__webpack_require__, /*! ./vue/views/Contact */ "./resources/js/vue/views/Contact.vue"));
+  } //Forma de importar vista.
+}, {
   name: 'transitionsTransform',
-  path: '/transitions_transform',
+  path: '/transitions-transform',
   component: TransitionsTransform
+}, {
+  name: 'parallax',
+  path: '/parallax',
+  component: Parallax
 }];
 var router = (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createRouter)({
   history: (0,vue_router__WEBPACK_IMPORTED_MODULE_0__.createWebHistory)(process.env.BASE_URL),
@@ -41332,6 +41354,18 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		};
 /******/ 	})();
 /******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -41362,7 +41396,7 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames not based on template
-/******/ 			if ({"resources_js_vue_components_home_Home_vue":1,"resources_js_vue_courses_TransitionsTransform_vue":1,"resources_js_vue_components_home_ListCurse_vue":1}[chunkId]) return "js/" + chunkId + ".js";
+/******/ 			if ({"resources_js_vue_views_Home_vue":1,"resources_js_vue_views_Courses_vue":1,"contact":1,"resources_js_vue_views_courses_TransitionsTransform_vue":1,"resources_js_vue_views_courses_Parallax_vue":1}[chunkId]) return "js/" + chunkId + ".js";
 /******/ 			// return url for filenames based on template
 /******/ 			return undefined;
 /******/ 		};
@@ -41554,6 +41588,11 @@ module.exports = JSON.parse('{"name":"axios","version":"0.21.4","description":"P
 /******/ 		var chunkLoadingGlobal = self["webpackChunk"] = self["webpackChunk"] || [];
 /******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
 /******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
 /******/ 	
 /************************************************************************/

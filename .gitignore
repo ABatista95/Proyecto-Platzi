@@ -1,8 +1,11 @@
 
-/vendor/
 /node_modules
 /public/hot
 /public/storage
+/public/css/app.css
+/public/js/app.js
+/public/mix-manifest.json
+/public/js/app.js.LICENSE.txt
 /storage/*.key
 
 # Laravel 4 specific
@@ -19,7 +22,6 @@ public_html/hot
 
 storage/*.key
 .env
-.env.backup
 Homestead.yaml
 Homestead.json
 /.vagrant
