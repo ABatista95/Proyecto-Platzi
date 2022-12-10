@@ -2,4 +2,6 @@
 deployment:
     tasks:
       - export DEPLOYPATH=/home/tingcolc/portfolio/development
-      - /bin/cp -r * $DEPLOYPATH
+      - /bin/rm -Rf $DEPLOYPATH
+      - /bin/mkdir $DEPLOYPATH
+      - /bin/cp -R resource/. $DEPLOYPATH
